@@ -13,20 +13,20 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^1.16.4",
     "@stripe/stripe-js": "^1.46.0",
-    "@thirdweb-dev/react": "^3.9.0",
-    "@thirdweb-dev/sdk": "^3.9.0",
+    "@thirdweb-dev/react": "^3.9.1",
+    "@thirdweb-dev/sdk": "^3.9.1",
     "ethers": "^5.7.2",
     "micro": "^10.0.1",
-    "next": "^13",
-    "react": "^18.2",
-    "react-dom": "^18.2",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "stripe": "^11.11.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.11",
-    "@types/react": "^18",
-    "eslint": "^8.29.0",
-    "eslint-config-next": "^13",
-    "typescript": "^4.9.4"
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.28",
+    "eslint": "^8.34.0",
+    "eslint-config-next": "^13.1.6",
+    "typescript": "^4.9.5"
   }
 }
