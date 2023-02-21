@@ -2,6 +2,7 @@ import Stripe from "stripe";
 import { buffer } from "micro";
 import { NextApiRequest, NextApiResponse } from "next";
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+import { EDITION_ADDRESS } from "../../constants/addresses";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: "2022-11-15",
@@ -24,10 +25,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     "mumbai"
   );
 
-  const nftCollection = await sdk.getContract(
-    "0x247a0AaEd6afaCC3a80662FD9d21e4455a83CCFb",
-    "edition"
-  );
+  const nftCollection = await sdk.getContract(EDITION_ADDRESS, "edition");
 
   let event;
 

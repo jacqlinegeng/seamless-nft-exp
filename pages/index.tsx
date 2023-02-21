@@ -4,7 +4,6 @@ import {
   loadStripe,
   StripeElementsOptions,
 } from "@stripe/stripe-js";
-import { ConnectWallet } from "@thirdweb-dev/react";
 import {
   ThirdwebNftMedia,
   useAddress,
@@ -12,19 +11,18 @@ import {
   useNFT,
 } from "@thirdweb-dev/react";
 import { useMagic } from "@thirdweb-dev/react/evm/connectors/magic";
+import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import Form from "../components/Form";
-import type { NextPage } from "next";
+import { EDITION_ADDRESS } from "../constants/addresses";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
-
+  const address = useAddress();
   const connectWithMagic = useMagic();
   const [email, setEmail] = useState<string>("");
-  const address = useAddress();
-
-  const { contract } = useContract("0x247a0AaEd6afaCC3a80662FD9d21e4455a83CCFb", "edition");
-  const { data: nft } = useNFT(contract, 0);
+  const { contract } = useContract(EDITION_ADDRESS, "edition");
+  const { data: nft } = useNFT(contract, 1);
   const [clientSecret, setClientSecret] = useState("");
 
   const stripe = loadStripe(
@@ -58,11 +56,11 @@ const Home: NextPage = () => {
   }, [address]);
 
   return (
-    <div>
+    <div className={styles.container}>
       {address ? (
         <>
           <p>You are signed in as: {address}</p>
-          <div>
+          <div className={styles.nftCard}>
             {nft?.metadata && (
               <ThirdwebNftMedia
                 metadata={nft?.metadata}
@@ -100,10 +98,11 @@ const Home: NextPage = () => {
             <input
               type="email"
               placeholder="Your Email Address"
+              className={styles.textInput}
               style={{ width: "90%", marginBottom: 0 }}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button>Login</button>
+            <button className={styles.mainButton}>Login</button>
           </form>
         </>
       )}

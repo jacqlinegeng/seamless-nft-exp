@@ -13,13 +13,13 @@
   "dependencies": {
     "@stripe/react-stripe-js": "^1.16.4",
     "@stripe/stripe-js": "^1.46.0",
-    "@thirdweb-dev/react": "^3.9.1",
-    "@thirdweb-dev/sdk": "^3.9.1",
+    "@thirdweb-dev/react": "^3",
+    "@thirdweb-dev/sdk": "^3",
     "ethers": "^5.7.2",
     "micro": "^10.0.1",
-    "next": "^13.1.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next": "^13",
+    "react": "^18.2",
+    "react-dom": "^18.2",
     "stripe": "^11.11.0"
   },
   "devDependencies": {

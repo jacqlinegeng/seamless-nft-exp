@@ -3,17 +3,17 @@ lockfileVersion: 5.4
 specifiers:
   '@stripe/react-stripe-js': ^1.16.4
   '@stripe/stripe-js': ^1.46.0
-  '@thirdweb-dev/react': ^3.9.1
-  '@thirdweb-dev/sdk': ^3.9.1
+  '@thirdweb-dev/react': ^3
+  '@thirdweb-dev/sdk': ^3
   '@types/node': ^18.14.0
   '@types/react': ^18.0.28
   eslint: ^8.34.0
   eslint-config-next: ^13.1.6
   ethers: ^5.7.2
   micro: ^10.0.1
-  next: ^13.1.6
-  react: ^18.2.0
-  react-dom: ^18.2.0
+  next: ^13
+  react: ^18.2
+  react-dom: ^18.2
   stripe: ^11.11.0
   typescript: ^4.9.5
 
@@ -1560,6 +1560,7 @@ packages:
 
   /@walletconnect/ethereum-provider/1.7.5:
     resolution: {integrity: sha512-hEY7YhQSCcUccwuVgQvpL/FZB6ov07ad+FZ0NSsr8Xv54ysmgoaE8tdReVa8zrGK2LCuB6mtfSGx2E0bZ2H4Ng==}
+    deprecated: 'WalletConnect''s v1 SDKs are now deprecated. Please upgrade to a v2 SDK. For details see: https://docs.walletconnect.com/'
     dependencies:
       '@walletconnect/client': 1.8.0
       '@walletconnect/jsonrpc-http-connection': 1.0.4
